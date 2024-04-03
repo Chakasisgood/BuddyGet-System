@@ -24,53 +24,53 @@
             <div class="card-body">
                 <p class="login-box-msg text-dark">Register</p>
 
-                <form id="register-frm" action="" method="post">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="username" placeholder="Username" autofocus>
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-user"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" name="reg-pass" placeholder="Password">
-                        <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-eye-slash toggle-password"></span>
-                                </div>
-                            </div>
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-lock"></span>
-                                </div>
-                            </div>
-                    </div>
-                    
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" name="confirm-reg-pass" placeholder="Confirm Password">
-                        <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-eye-slash toggle-password"></span>
-                                </div>
-                            </div>
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-lock"></span>
-                                </div>
-                            </div>
-                    </div>
+                <!-- Registration Form -->
+<form id="register-frm" method="post" action="">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" name="username" placeholder="Username" autofocus>
+        <div class="input-group-append">
+            <div class="input-group-text">
+                <span class="fas fa-user"></span>
+            </div>
+        </div>
+    </div>
+    <div class="input-group mb-3">
+        <input type="password" class="form-control" name="reg_pass" placeholder="Password">
+        <!-- Add password visibility toggle button -->
+        <div class="input-group-append">
+            <div class="input-group-text">
+                <span class="fas fa-eye-slash toggle-password"></span>
+            </div>
+        </div>
+        <div class="input-group-append">
+            <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+            </div>
+        </div>
+    </div>
+    <div class="input-group mb-3">
+        <input type="password" class="form-control" name="confirm_reg_pass" placeholder="Confirm Password">
+        <!-- Add password visibility toggle button -->
+        <div class="input-group-append">
+            <div class="input-group-text">
+                <span class="fas fa-eye-slash toggle-password"></span>
+            </div>
+        </div>
+        <div class="input-group-append">
+            <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+        <p class="text-dark mt-2 d-block mx-auto">Already have an account? <span><a href="./login.php">Login</a></span></p>
+                            <!-- /.col -->
+    </div>
+    
+</form>
 
-                    <div class="row justify-conten-center">
-                        <!-- /.col -->
-                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
-                        
-                        <p class="text-dark mt-2 d-block mx-auto">Already have an account? <span><a href="./login.php">Login</a></span></p>
-                        <!-- /.col -->
-                    </div>
-                </form>
         
-                
 
             </div>
             <!-- /.card-body -->
@@ -92,9 +92,8 @@
     <script>
     $(document).ready(function() {
         end_loader();
-    })
-    
-    $('.toggle-password').click(function() {
+
+        $('.toggle-password').click(function() {
         $(this).toggleClass('fa-eye fa-eye-slash');
         var input = $($(this).closest('.input-group').find('input'));
         if (input.attr('type') === 'password') {
@@ -103,7 +102,12 @@
             input.attr('type', 'password');
         }
     });
+    })
+    
+  
     </script>
+
+   
 </body>
 
 </html>

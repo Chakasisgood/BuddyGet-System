@@ -55,7 +55,7 @@
 
                         <!-- <p class="fas fa-eye text-dark position-absolute z-2 "></p> -->
                         <i class="bi bi-2-circle"></i>
-                        <div class="row justify-conten-center">
+                        <div class="row justify-content-center">
                             <!-- /.col -->
                             <button type="submit" class="btn btn-primary btn-block">Log In</button>
 
@@ -83,7 +83,7 @@
     <!-- AdminLTE App -->
     <script src="dist/js/adminlte.min.js"></script>
 
-    <script>w
+    <script>
         $(document).ready(function() {
             end_loader();
         })

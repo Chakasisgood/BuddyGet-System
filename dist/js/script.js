@@ -140,4 +140,39 @@ $(document).ready(function(){
 			}
 		})
 	})
+	// Handle registration form submission
+    $('#register-frm').submit(function(e) {
+        e.preventDefault();
+        start_loader(); // Start loader animation
+        var formData = $(this).serialize(); // Serialize form data
+		console.log(formData)
+        $.ajax({
+			url:_base_url_+'classes/Login.php?f=register',
+            method: 'POST',
+            data: formData,
+            error: function(err) {
+                console.log(err);
+            },
+            success: function(resp) {
+				resp = JSON.parse(resp);
+                if (resp) {
+                    console.log(resp)
+                    if (resp.status == 'success') {
+						
+                        alert_toast("Registration successful", 'success');
+						location.replace(_base_url_+'admin/login.php');
+                    } else {
+                        
+						console.log(resp)
+                        alert_toast("Registration failed: " + resp.error, 'error');
+                    }
+                }
+                end_loader(); 
+            }
+        });
+    });
+	
+	
 })
+
+
