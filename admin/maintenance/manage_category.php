@@ -10,7 +10,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 ?>
 <div class="card card-outline card-info">
 	<div class="card-header">
-		<h3 class="card-title"><?php echo isset($id) ? "Update ": "Create New " ?> Catgory</h3>
+		<h3 class="card-title"><?php echo isset($id) ? "Update ": "Create New " ?> Category</h3>
 	</div>
 	<div class="card-body">
 		<form action="" id="category-form">

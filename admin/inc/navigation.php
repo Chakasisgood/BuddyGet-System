@@ -39,7 +39,7 @@
                       <a href="<?php echo base_url ?>admin/?page=budget" class="nav-link nav-budget">
                         <i class="nav-icon fas fa-wallet"></i>
                         <p>
-                          Budget Management
+                          Alloted Budget
                         </p>
                       </a>
                     </li>
@@ -47,7 +47,7 @@
                       <a href="<?php echo base_url ?>admin/?page=expense" class="nav-link nav-expense">
                         <i class="nav-icon fas fa-money-bill-wave"></i>
                         <p>
-                          Expense Management
+                          Expenses
                         </p>
                       </a>
                     </li>
@@ -73,7 +73,7 @@
                       <a href="<?php echo base_url ?>admin/?page=maintenance/category" class="nav-link nav-maintenance/category">
                         <i class="nav-icon fas fa-th-list"></i>
                         <p>
-                          Category List
+                          Category
                         </p>
                       </a>
                     </li>

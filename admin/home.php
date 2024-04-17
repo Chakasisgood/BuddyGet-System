@@ -13,7 +13,7 @@
               <span class="info-box-icon bg-primary elevation-1"><i class="fas fa-money-bill-alt"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Current Overall Budget</span>
+                <span class="info-box-text">Overall Alloted Budget</span>
                 <span class="info-box-number text-right">
                   <?php 
                     $cur_bul = $conn->query("SELECT sum(balance) as total FROM `categories` where status = 1 ")->fetch_assoc()['total'];
@@ -27,12 +27,12 @@
             <!-- /.info-box -->
           </div>
           <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-3">
+          <!-- <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box mb-3">
               <span class="info-box-icon bg-info elevation-1"><i class="fas fa-calendar-day"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Today's Budget Entries</span>
+                <span class="info-box-text">Total Budget Entries</span>
                 <span class="info-box-number text-right">
                   <?php 
                     $today_budget = $conn->query("SELECT sum(amount) as total FROM `running_balance` where category_id in (SELECT id FROM categories where status =1) and date(date_created) = '".(date("Y-m-d"))."' and balance_type = 1 ")->fetch_assoc()['total'];
@@ -40,11 +40,11 @@
                   ?>
                 </span>
               </div>
-              <!-- /.info-box-content -->
+             
             </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
+            
+          </div> -->
+      
 
           <!-- fix for small devices only -->
           <div class="clearfix hidden-md-up"></div>
@@ -54,7 +54,7 @@
               <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-calendar-day"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Today's Budget Expenses</span>
+                <span class="info-box-text">Total Expenses</span>
                 <span class="info-box-number text-right">
                 <?php 
                     $today_expense = $conn->query("SELECT sum(amount) as total FROM `running_balance` where category_id in (SELECT id FROM categories where status =1) and date(date_created) = '".(date("Y-m-d"))."' and balance_type = 2 ")->fetch_assoc()['total'];
@@ -69,7 +69,7 @@
         </div>
 <div class="row">
   <div class="col-lg-12">
-    <h4>Current Budget in each Categories</h4>
+    <h4>Alloted Budget in each Categories</h4>
     <hr>
   </div>
 </div>

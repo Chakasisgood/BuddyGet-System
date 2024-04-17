@@ -5,7 +5,7 @@
 <?php endif;?>
 <div class="card card-outline card-primary">
 	<div class="card-header">
-		<h3 class="card-title">Expense Management</h3>
+		<h3 class="card-title">Expenses</h3>
 		<div class="card-tools">
 			<a href="javascript:void(0)" id="manage_expense" class="btn btn-flat btn-sm btn-primary"><span class="fas fa-plus"></span>  Add New</a>
 		</div>
@@ -28,7 +28,7 @@
 						<th>Date Created</th>
 						<th>Category</th>
 						<th>Amount</th>
-						<th>Remarks</th>
+						<th>Desription</th>
 						<th>Action</th>
 					</tr>
 				</thead>

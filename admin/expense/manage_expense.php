@@ -44,7 +44,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
         <input name="amount" id="amount" class="form-control form text-right number" value="<?php echo isset($amount) ? ($amount) : 0; ?>">
     </div>
     <div class="form-group">
-        <label for="remarks" class="control-label">Remarks</label>
+        <label for="remarks" class="control-label">Description</label>
         <textarea name="remarks" id="" cols="30" rows="2" class="form-control form no-resize summernote"><?php echo isset($remarks) ? $remarks : ''; ?></textarea>
     </div>
 </form>

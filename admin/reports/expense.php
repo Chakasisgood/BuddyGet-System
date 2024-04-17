@@ -53,7 +53,7 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
                         <th>Entry DateTime</th>
                         <th>Category</th>
                         <th>Amount</th>
-                        <th>Remarks</th>
+                        <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
