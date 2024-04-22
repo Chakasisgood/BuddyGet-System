@@ -61,6 +61,7 @@ foreach($user->fetch_array() as $k =>$v){
 		border-radius: 100% 100%;
 	}
 </style>
+
 <script>
 	function displayImg(input,_this) {
 	    if (input.files && input.files[0]) {

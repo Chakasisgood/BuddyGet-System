@@ -1,3 +1,4 @@
+
 <?php require_once('../config.php') ?>
 <!DOCTYPE html>
 <html lang="en" class="" style="height: auto;">
@@ -57,7 +58,7 @@
                         <i class="bi bi-2-circle"></i>
                         <div class="row justify-content-center">
                             <!-- /.col -->
-                            <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                            <button type="submit" value="login" class="btn btn-primary btn-block">Log In</button>
 
                             <p class="text-dark mt-2 d-block mx-auto">Don't have an account? <span><a href="./register.php">Sign Up</a></span></p>
                             <!-- /.col -->

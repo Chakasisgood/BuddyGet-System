@@ -1,9 +1,12 @@
+
 <?php require_once('../config.php') ?>
 <!DOCTYPE html>
 <html lang="en" class="" style="height: auto;">
 <?php require_once('inc/header.php') ?>
 
 <body class="hold-transition login-page bg-navy">
+
+
 
     <script>
     start_loader()
@@ -25,7 +28,7 @@
                 <p class="login-box-msg text-dark">Register</p>
 
                 <!-- Registration Form -->
-<form id="register-frm" method="post" action="">
+                <form id="register-frm" method="post" action="">
     <div class="input-group mb-3">
         <input type="text" class="form-control" name="username" placeholder="Username" autofocus>
         <div class="input-group-append">
@@ -63,7 +66,7 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+        <button type="submit" value="submit" class="btn btn-primary btn-block">Sign Up</button>
         <p class="text-dark mt-2 d-block mx-auto">Already have an account? <span><a href="./login.php">Login</a></span></p>
                             <!-- /.col -->
     </div>
