@@ -11,6 +11,17 @@
     <script>
     start_loader()
     </script>
+
+<style>
+
+
+    /* Set aside height to match viewport height */
+    aside {
+      height: 43vh; /* Set aside height to 100% of viewport height */
+    }
+    
+  </style>
+
    
 
     <main class="d-flex">
@@ -25,7 +36,7 @@
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="card-body">
-                <p class="login-box-msg text-dark">Register</p>
+                <p class="login-box-msg text-dark">REGISTER</p>
 
                 <!-- Registration Form -->
                 <form id="register-frm" method="post" action="">

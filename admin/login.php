@@ -10,7 +10,15 @@
         start_loader()
     </script>
 
+<style>
+    
 
+    /* Set aside height to match viewport height */
+    aside {
+      height: 38vh; /* Set aside height to 100% of viewport height */
+    }
+    
+  </style>
 
 
     <main class="d-flex">
@@ -23,8 +31,8 @@
             <h2 class="text-center mb-4 pb-3"><?php echo $_settings->info('name') ?>
             </h2>
             <!-- /.login-logo -->
-            <div class="card card-outline card-primary">
-                <div class="card-body">
+            <div class="card card-outline card-primary w-100">
+                <div class="card-body w-100 h-100">
                     <p class="login-box-msg text-dark">LOGIN</p>
 
                     <form id="login-frm" action="" method="post">
