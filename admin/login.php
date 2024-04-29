@@ -4,29 +4,19 @@
 <html lang="en" class="" style="height: auto;">
 <?php require_once('inc/header.php') ?>
 
-<body class="hold-transition login-page bg-navy">
+<body class="hold-transition login-page bg-navy"  >
+
 
     <script>
         start_loader()
     </script>
 
-<style>
-    
-
-    /* Set aside height to match viewport height */
-    aside {
-      height: 38vh; /* Set aside height to 100% of viewport height */
-    }
-    
-  </style>
 
 
-    <main class="d-flex">
 
-        <aside class="w-100 mx-4">
-            <img src="../assets/images/bg-image.png" alt="buddyget-background-image" class="w-100 h-100">
-        </aside>
+    <main class="d-flex" >
 
+       
         <div class="login-box _form w-100 mx-4">
             <h2 class="text-center mb-4 pb-3"><?php echo $_settings->info('name') ?>
             </h2>

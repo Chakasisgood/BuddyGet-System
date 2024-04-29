@@ -116,13 +116,13 @@
 </div>
 
 
-<canvas id="myBarChart" width="100" height="30"></canvas>
+<!-- <canvas id="myBarChart" width="100" height="30"></canvas>
 
 <?php
 // Sample data for the bar graph
 $labels = ['Groceries', 'Transportation', 'Meals and Snacks', 'Utilities', 'Rent', 'Personal Care Products', 'Entertainment', 'Communication Services','Household Supplies'];
 $data = [65, 59, 80, 81, 56, 23, 12, 65, 22, 54];
-?>
+?> -->
 
 
 
@@ -130,43 +130,43 @@ $data = [65, 59, 80, 81, 56, 23, 12, 65, 22, 54];
 
 <script>
 
-    var ctx = document.getElementById('myBarChart').getContext('2d');
-    var myBarChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: <?php echo json_encode($labels); ?>,
-            datasets: [{
-                label: 'Expense Graph',
-                data: <?php echo json_encode($data); ?>,
-                backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)',
-                  'rgba(255, 159, 64, 0.2)',
-                  'rgba(255, 205, 86, 0.2)',
-                  'rgba(75, 192, 192, 0.2)',
-                  'rgba(54, 162, 235, 0.2)',
-                  'rgba(153, 102, 255, 0.2)',
-                  'rgba(201, 203, 207, 0.2)'
-                ],
-                borderColor: [
-                  'rgb(255, 99, 132)',
-                  'rgb(255, 159, 64)',
-                  'rgb(255, 205, 86)',
-                  'rgb(75, 192, 192)',
-                  'rgb(54, 162, 235)',
-                  'rgb(153, 102, 255)',
-                  'rgb(201, 203, 207)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
+    // var ctx = document.getElementById('myBarChart').getContext('2d');
+    // var myBarChart = new Chart(ctx, {
+    //     type: 'bar',
+    //     data: {
+    //         labels: <?php echo json_encode($labels); ?>,
+    //         datasets: [{
+    //             label: 'Expense Graph',
+    //             data: <?php echo json_encode($data); ?>,
+    //             backgroundColor: [
+    //               'rgba(255, 99, 132, 0.2)',
+    //               'rgba(255, 159, 64, 0.2)',
+    //               'rgba(255, 205, 86, 0.2)',
+    //               'rgba(75, 192, 192, 0.2)',
+    //               'rgba(54, 162, 235, 0.2)',
+    //               'rgba(153, 102, 255, 0.2)',
+    //               'rgba(201, 203, 207, 0.2)'
+    //             ],
+    //             borderColor: [
+    //               'rgb(255, 99, 132)',
+    //               'rgb(255, 159, 64)',
+    //               'rgb(255, 205, 86)',
+    //               'rgb(75, 192, 192)',
+    //               'rgb(54, 162, 235)',
+    //               'rgb(153, 102, 255)',
+    //               'rgb(201, 203, 207)'
+    //             ],
+    //             borderWidth: 1
+    //         }]
+    //     },
+    //     options: {
+    //         scales: {
+    //             y: {
+    //                 beginAtZero: true
+    //             }
+    //         }
+    //     }
+    // });
 
 
 

@@ -39,7 +39,7 @@
                       <a href="<?php echo base_url ?>admin/?page=budget" class="nav-link nav-budget">
                         <i class="nav-icon fas fa-wallet"></i>
                         <p>
-                          Alloted Budget
+                          Add Budget
                         </p>
                       </a>
                     </li>
