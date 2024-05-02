@@ -76,25 +76,25 @@ class Login extends DBConnection
 }
 
 
-	function login_user()
-	{
-		extract($_POST);
-		$qry = $this->conn->query("SELECT * from clients where email = '$email' and password = md5('$password') ");
-		if ($qry->num_rows > 0) {
-			foreach ($qry->fetch_array() as $k => $v) {
-				$this->settings->set_userdata($k, $v);
-			}
-			$this->settings->set_userdata('login_type', 1);
-			$resp['status'] = 'success';
-		} else {
-			$resp['status'] = 'incorrect';
-		}
-		if ($this->conn->error) {
-			$resp['status'] = 'failed';
-			$resp['_error'] = $this->conn->error;
-		}
-		return json_encode($resp);
-	}
+	// function login_user()
+	// {
+	// 	extract($_POST);
+	// 	$qry = $this->conn->query("SELECT * from clients where email = '$email' and password = md5('$password') ");
+	// 	if ($qry->num_rows > 0) {
+	// 		foreach ($qry->fetch_array() as $k => $v) {
+	// 			$this->settings->set_userdata($k, $v);
+	// 		}
+	// 		$this->settings->set_userdata('login_type', 1);
+	// 		$resp['status'] = 'success';
+	// 	} else {
+	// 		$resp['status'] = 'incorrect';
+	// 	}
+	// 	if ($this->conn->error) {
+	// 		$resp['status'] = 'failed';
+	// 		$resp['_error'] = $this->conn->error;
+	// 	}
+	// 	return json_encode($resp);
+	// }
 }
 $action = !isset($_GET['f']) ? 'none' : strtolower($_GET['f']);
 $auth = new Login();

@@ -1,5 +1,8 @@
 
-<?php require_once('../config.php') ?>
+<?php require_once('../config.php');
+require_once('Login.php'); // Include the Login class file
+
+?>
 <!DOCTYPE html>
 <html lang="en" class="" style="height: auto;">
 <?php require_once('inc/header.php') ?>

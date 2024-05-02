@@ -1,5 +1,14 @@
 <?php
 require_once('../config.php');
+
+
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
+
+
+
+
 Class Master extends DBConnection {
 	private $settings;
 	public function __construct(){
@@ -33,6 +42,14 @@ Class Master extends DBConnection {
 			if(!empty($data)) $data .=",";
 				$data .= " `description`='".addslashes(htmlentities($description))."' ";
 		}
+		$user = $_SESSION['userdata'];
+
+		$user_id = $user['id'];
+		
+		if(!empty($data)) $data .= ",";
+   		 $data .= " `user_id`='{$user_id}' ";
+
+
 		$check = $this->conn->query("SELECT * FROM `categories` where `category` = '{$category}' ".(!empty($id) ? " and id != {$id} " : "")." ")->num_rows;
 		if($this->capture_err())
 			return $this->capture_err();
