@@ -44,36 +44,47 @@ class Login extends DBConnection
 	}
 
 	public function register()
-{
-    extract($_POST);
+	{
 
-    // Check if password matches confirm password
-    if ($reg_pass !== $confirm_reg_pass) {
-        return json_encode(array('status' => 'failed', 'error' => 'Password and confirm password do not match'));
-    }
+		// Check if required fields are set and not empty
+		if (
+			!isset($_POST['username']) || !isset($_POST['reg_pass']) || !isset($_POST['confirm_reg_pass']) ||
+			empty($_POST['username']) || empty($_POST['reg_pass']) || empty($_POST['confirm_reg_pass'])
+		) {
+			return json_encode(array('status' => 'failed', 'error' => 'Required fields are missing or empty'));
+		}
 
-    // Check if username already exists
-    $check_username_query = "SELECT COUNT(*) as count FROM users WHERE username = '$username'";
-    $check_username_result = $this->conn->query($check_username_query);
-    $username_exists = $check_username_result->fetch_assoc()['count'];
-    if ($username_exists > 0) {
-        return json_encode(array('status' => 'failed', 'error' => 'Username already exists'));
-    }
 
-    $firstname = ""; 
-    $lastname = ""; 
 
-    
-    $query = "INSERT INTO users (firstname, lastname, username, password) 
+		extract($_POST);
+
+		// Check if password matches confirm password
+		if ($reg_pass !== $confirm_reg_pass) {
+			return json_encode(array('status' => 'failed', 'error' => 'Password and confirm password do not match'));
+		}
+
+		// Check if username already exists
+		$check_username_query = "SELECT COUNT(*) as count FROM users WHERE username = '$username'";
+		$check_username_result = $this->conn->query($check_username_query);
+		$username_exists = $check_username_result->fetch_assoc()['count'];
+		if ($username_exists > 0) {
+			return json_encode(array('status' => 'failed', 'error' => 'Username already exists'));
+		}
+
+		$firstname = "";
+		$lastname = "";
+
+
+		$query = "INSERT INTO users (firstname, lastname, username, password) 
               VALUES ('$firstname', '$lastname', '$username', MD5('$reg_pass'))";
-    if ($this->conn->query($query)) {
-        // Registration successful
-        return json_encode(array('status' => 'success'));
-    } else {
-        // Registration failed
-        return json_encode(array('status' => 'failed', 'error' => $this->conn->error));
-    }
-}
+		if ($this->conn->query($query)) {
+			// Registration successful
+			return json_encode(array('status' => 'success'));
+		} else {
+			// Registration failed
+			return json_encode(array('status' => 'failed', 'error' => $this->conn->error));
+		}
+	}
 
 
 	// function login_user()

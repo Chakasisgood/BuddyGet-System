@@ -8,7 +8,7 @@
 <?php require_once('inc/header.php') ?>
 
 <body class="hold-transition login-page bg-navy">
-    
+
 
     <script>
         start_loader()
@@ -16,7 +16,7 @@
 
 
 
-<main class="d-flex" >
+    <main class="d-flex">
 
         <div class="login-box _form w-100 mx-4">
             <h2 class="text-center mb-4 pb-3"><?php echo $_settings->info('name') ?>
