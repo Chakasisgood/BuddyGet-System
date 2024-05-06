@@ -109,7 +109,7 @@ $user_id = $user['id'];
     $(function() {
         $('#filter-form').submit(function(e) {
             e.preventDefault()
-            location.href = "./?page=reports/budget&date_start=" + $('[name="date_start"]').val() + "&date_end=" + $('[name="date_end"]').val()
+            location.href = "./?page=reports/expense&date_start=" + $('[name="date_start"]').val() + "&date_end=" + $('[name="date_end"]').val()
         })
 
         $('#printBTN').click(function() {

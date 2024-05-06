@@ -1,13 +1,12 @@
-
-<?php require_once('../config.php');
-require_once('Login.php'); // Include the Login class file
+<?php require_once('../config.php')
+// require_once('Login.php'); // Include the Login class file
 
 ?>
 <!DOCTYPE html>
 <html lang="en" class="" style="height: auto;">
 <?php require_once('inc/header.php') ?>
 
-<body class="hold-transition login-page bg-navy"  >
+<body class="hold-transition login-page bg-navy">
 
 
     <script>
@@ -17,9 +16,9 @@ require_once('Login.php'); // Include the Login class file
 
 
 
-    <main class="d-flex" >
+    <main class="d-flex">
 
-       
+
         <div class="login-box _form w-100 mx-4">
             <h2 class="text-center mb-4 pb-3"><?php echo $_settings->info('name') ?>
             </h2>
@@ -42,7 +41,7 @@ require_once('Login.php'); // Include the Login class file
                         </div>
                         <div class="input-group mb-3 position-relative">
                             <input type="password" class="form-control" name="password" placeholder="Password">
-                            
+
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-eye-slash toggle-password"></span>
@@ -90,17 +89,16 @@ require_once('Login.php'); // Include the Login class file
             end_loader();
         })
         $(document).ready(function() {
-    $('.toggle-password').click(function() {
-        $(this).toggleClass('fa-eye fa-eye-slash');
-        var input = $($(this).closest('.input-group').find('input'));
-        if (input.attr('type') === 'password') {
-            input.attr('type', 'text');
-        } else {
-            input.attr('type', 'password');
-        }
-    });
-});
-
+            $('.toggle-password').click(function() {
+                $(this).toggleClass('fa-eye fa-eye-slash');
+                var input = $($(this).closest('.input-group').find('input'));
+                if (input.attr('type') === 'password') {
+                    input.attr('type', 'text');
+                } else {
+                    input.attr('type', 'password');
+                }
+            });
+        });
     </script>
 </body>
 
